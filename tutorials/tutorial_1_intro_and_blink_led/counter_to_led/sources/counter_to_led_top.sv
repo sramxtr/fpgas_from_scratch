@@ -10,7 +10,7 @@ module counter_to_led_top(
     
     assign led_out = counter[28:25];
     
-    always @ (posedge clk) begin
+    always_ff @ (posedge clk) begin
         if (reset == 1) begin
             counter <= '0;
         end else begin
@@ -18,6 +18,6 @@ module counter_to_led_top(
                 counter <= counter + 1;
             end
         end
-    end // always
+    end // always_ff
     
 endmodule

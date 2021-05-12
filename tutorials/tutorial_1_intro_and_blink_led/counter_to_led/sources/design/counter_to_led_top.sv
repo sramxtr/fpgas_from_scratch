@@ -4,7 +4,7 @@ module counter_to_led_top(
     output logic [3:0] led_out
     );
     
-    logic [28:0] counter = 0;
+    logic [27:0] counter = 0;
     
     assign led_out = counter[27:24];
     

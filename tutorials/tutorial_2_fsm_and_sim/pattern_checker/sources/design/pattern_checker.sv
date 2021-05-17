@@ -13,12 +13,26 @@ module pattern_checker(
     localparam [3:0] code_2_sig = 4'b1000;
     localparam [3:0] code_3_sig = 4'b0001;    
     
-    enum {WAIT_FOR_START,
-          WAIT_FOR_CODE_1,
-          WAIT_FOR_CODE_2,
-          WAIT_FOR_CODE_3,
-          FAILURE,
-          SUCCESS} current_state_sig, next_state_sig;
+    typedef enum {WAIT_FOR_START,
+                  WAIT_FOR_CODE_1,
+                  WAIT_FOR_CODE_2,
+                  WAIT_FOR_CODE_3,
+                  FAILURE,
+                  SUCCESS} state_t;
+                  
+    state_t current_state_sig, next_state_sig;
+    
+    task check_code_and_proceed(input logic [3:0] target_code,
+                                input logic [3:0] code_in,
+                                input logic action_in,
+                                input state_t next_success_state,
+                                output state_t next_state);                                
+        if (action_in == 1)
+            if(code_in == target_code)
+                next_state = next_success_state;
+            else
+                next_state = FAILURE;
+    endtask
                    
     always_comb begin
         // Defaults
@@ -34,29 +48,17 @@ module pattern_checker(
             
             WAIT_FOR_CODE_1: begin
                 led_b_out = 1; 
-                if (action_in == 1)
-                    if(code_in == code_1_sig)
-                        next_state_sig = WAIT_FOR_CODE_2;
-                    else
-                        next_state_sig = FAILURE;
+                check_code_and_proceed(code_1_sig, code_in, action_in, WAIT_FOR_CODE_2, next_state_sig);
             end // WAIT_FOR_CODE_1
             
             WAIT_FOR_CODE_2: begin
                 led_b_out = 1; 
-                if (action_in == 1)
-                    if (code_in == code_2_sig)
-                        next_state_sig = WAIT_FOR_CODE_3;
-                    else
-                        next_state_sig = FAILURE;
+                check_code_and_proceed(code_2_sig, code_in, action_in, WAIT_FOR_CODE_3, next_state_sig);
             end // WAIT_FOR_CODE_2
             
             WAIT_FOR_CODE_3: begin
                 led_b_out = 1; 
-                if (action_in == 1)
-                    if (code_in == code_3_sig)
-                        next_state_sig = SUCCESS;
-                    else
-                        next_state_sig = FAILURE;           
+                check_code_and_proceed(code_3_sig, code_in, action_in, SUCCESS, next_state_sig);           
             end // WAIT_FOR_CODE_3
             
             FAILURE: begin

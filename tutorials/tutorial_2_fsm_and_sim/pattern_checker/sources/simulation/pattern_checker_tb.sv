@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 
-module patter_checker_tb();
+module pattern_checker_tb();
 
     logic clk_sig = 0;
     logic reset_sig = 0, action_in_sig = 0, led_r_out_sig, led_g_out_sig, led_b_out_sig;

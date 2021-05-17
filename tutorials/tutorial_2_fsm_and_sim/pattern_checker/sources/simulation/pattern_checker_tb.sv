@@ -6,7 +6,6 @@ module pattern_checker_tb();
     logic clk_sig = 0;
     logic reset_sig = 0, action_in_sig = 0, led_r_out_sig, led_g_out_sig, led_b_out_sig;
     logic [3:0] code_in_sig = 0;
-    logic [2:0] state_out_sig;
     
     // Note that codes are localparam inside the pattern checker
     // As such, they are not exposed outside of the pattern checker
@@ -62,7 +61,7 @@ module pattern_checker_tb();
                      .code_in(code_in_sig),
                      .led_r_out(led_r_out_sig),
                      .led_g_out(led_g_out_sig),
-                     .led_b_out(led_b_out_sig),
-                     .state_out(state_out_sig));
+                     .led_b_out(led_b_out_sig)
+                     );
 
 endmodule

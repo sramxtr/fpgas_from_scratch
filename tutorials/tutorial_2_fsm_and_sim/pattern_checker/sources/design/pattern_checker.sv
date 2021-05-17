@@ -6,8 +6,7 @@ module pattern_checker(
     input logic [3:0] code_in,
     output logic led_r_out,
     output logic led_g_out,
-    output logic led_b_out,
-    output logic [2:0] state_out
+    output logic led_b_out
     );
     
     localparam [3:0] code_1_sig = 4'b0101;
@@ -20,9 +19,7 @@ module pattern_checker(
           WAIT_FOR_CODE_3,
           FAILURE,
           SUCCESS} current_state_sig, next_state_sig;
-          
-    assign state_out = current_state_sig;      
-          
+                   
     always_comb begin
         // Defaults
         next_state_sig = current_state_sig;

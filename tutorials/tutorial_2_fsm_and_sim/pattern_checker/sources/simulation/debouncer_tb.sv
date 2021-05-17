@@ -17,7 +17,7 @@ module debouncer_tb(
         // Fluctuate then stabilize at 1
         // Each fluctuation lasts less than 2^COUNTER_BITS cycles
         data_in_sig = 1; #2
-        assert(data_out_sig == 0);
+        assert(data_out_sig == 1);
         data_in_sig = 0; #3
         data_in_sig = 1; #1
         assert(data_out_sig == 0);

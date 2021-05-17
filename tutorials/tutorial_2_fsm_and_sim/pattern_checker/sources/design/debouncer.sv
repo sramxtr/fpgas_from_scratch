@@ -7,8 +7,8 @@ module debouncer
     output logic data_out
     );
         
-    logic data_ff1_postbuf_sig;
-    logic data_ff2_postbuf_sig;
+    logic data_ff1_postbuf_sig = 0;
+    logic data_ff2_postbuf_sig = 0;
     logic dataout_prebuf_sig, dataout_postbuf_sig = 0;
     logic [COUNTER_BITS-1:0] counter_prebuf_sig, counter_postbuf_sig = 0;
     

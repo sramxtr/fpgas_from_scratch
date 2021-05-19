@@ -61,7 +61,6 @@ module pattern_checker_tb();
                      .code_in(code_in_sig),
                      .led_r_out(led_r_out_sig),
                      .led_g_out(led_g_out_sig),
-                     .led_b_out(led_b_out_sig)
-                     );
+                     .led_b_out(led_b_out_sig));
 
 endmodule

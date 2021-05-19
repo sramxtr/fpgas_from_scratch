@@ -1,10 +1,9 @@
 
-module rising_edge_to_pulse(
-    input logic clk,
-    input logic reset,
-    input logic data_in,
-    output logic data_out
-    );
+module rising_edge_to_pulse
+       (input logic clk,
+        input logic reset,
+        input logic data_in,
+        output logic data_out);
            
     enum {WAIT_FOR_1,
           EMIT_1,

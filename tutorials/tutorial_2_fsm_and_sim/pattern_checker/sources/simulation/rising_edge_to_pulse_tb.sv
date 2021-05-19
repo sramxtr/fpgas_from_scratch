@@ -19,8 +19,9 @@ module rising_edge_to_pulse_tb();
         $finish;
     end // initial 
 
-    rising_edge_to_pulse UUT (.clk(clk_sig),
-                              .reset(reset_sig),
-                              .data_in(data_in_sig),
-                              .data_out(data_out_sig));
+    rising_edge_to_pulse UUT
+                         (.clk(clk_sig),
+                          .reset(reset_sig),
+                          .data_in(data_in_sig),
+                          .data_out(data_out_sig));
 endmodule

@@ -42,9 +42,9 @@ module debouncer_tb(
     end // initial
     
     // Instantiate the debouncer module
-    debouncer #(.COUNTER_BITS(3)) UUT (.clk(clk_sig),
-                                       .data_in(data_in_sig),
-                                       .data_out(data_out_sig)
-                                       );
-    
+    debouncer #(.NUM_COUNTER_BITS(3)) UUT
+              (.clk(clk_sig),
+               .data_in(data_in_sig),
+               .data_out(data_out_sig));
+
 endmodule

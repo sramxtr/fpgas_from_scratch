@@ -1,13 +1,12 @@
 
-module pattern_checker(
-    input logic clk,
-    input logic reset,
-    input logic action_in,
-    input logic [3:0] code_in,
-    output logic led_r_out,
-    output logic led_g_out,
-    output logic led_b_out
-    );
+module pattern_checker
+      (input logic clk,
+       input logic reset,
+       input logic action_in,
+       input logic [3:0] code_in,
+       output logic led_r_out,
+       output logic led_g_out,
+       output logic led_b_out);
     
     localparam [3:0] code_1_sig = 4'b0101;
     localparam [3:0] code_2_sig = 4'b1000;

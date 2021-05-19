@@ -7,7 +7,7 @@ module rising_edge_to_pulse
            
     enum {WAIT_FOR_1,
           EMIT_1,
-          WAIT_FOR_0} current_state_sig, next_state_sig;
+          WAIT_FOR_0} current_state_sig = WAIT_FOR_1, next_state_sig;
             
     always_comb begin
         // Defaults

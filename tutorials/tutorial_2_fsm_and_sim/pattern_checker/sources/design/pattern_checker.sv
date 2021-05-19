@@ -19,7 +19,7 @@ module pattern_checker
                   FAILURE,
                   SUCCESS} state_t;
                   
-    state_t current_state_sig, next_state_sig;
+    state_t current_state_sig = WAIT_FOR_START, next_state_sig;
     
     task check_code_and_proceed(input logic [3:0] target_code,
                                 input logic [3:0] code_in,

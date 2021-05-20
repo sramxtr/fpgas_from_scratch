@@ -15,9 +15,9 @@ module debouncer_tb(
         assert(data_out_sig == 0) else $error("Hmm.. why is data_out not 0??");
         
         // Fluctuate then stabilize at 1
-        // Each fluctuation lasts less than 2^COUNTER_BITS cycles
+        // Each fluctuation lasts less than 2^NUM_COUNTER_BITS cycles
         data_in_sig = 1; #2
-        assert(data_out_sig == 1);
+        assert(data_out_sig == 0) else $error("Unexpected data_out to be 1 so soon");
         data_in_sig = 0; #3
         data_in_sig = 1; #1
         assert(data_out_sig == 0);
@@ -34,7 +34,7 @@ module debouncer_tb(
         assert(data_out_sig == 1);
         data_in_sig = 1; #3
         // Stabilize at 0
-        data_in_sig = 0; #9
+        data_in_sig = 0; #10
         assert(data_out_sig == 0) else $error("Expected data_out to be 0 by now");
         
         $finish;

@@ -1,9 +1,9 @@
-# Intro to FSMs and basics of RTL simulation
+# Intro to For loops and inferred BRAMs
 
-# Companion slide deck
+## Companion slide deck
 TODO
 
-# Circuit functionality
+## Circuit functionality
 We will develop a circuit that counts the number of unique values in an input stream
 - The input data will be stored to and read from an on-chip Block RAM (BRAM).
 - The unique value counter circuit will count up to a max number of unique values, as defined by a parameter.
@@ -19,7 +19,7 @@ Recall that FPGAs are really good at deep custom pipelines.
 
 Similar to [tutorial #1](https://github.com/sramxtr/fpgas_from_scratch/tree/main/tutorials/tutorial_1_intro_and_blink_led), we will target the Zybo Z7-20 board.
 
-# Concepts introduced
+## Concepts introduced
 Some concepts introduced in this tutorial include:
 - For loops in SystemVerilog. The provided source makes use of for loops in several places, namely:
   - To generate pipeline stages for the unique value trackers.

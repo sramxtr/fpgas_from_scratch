@@ -10,6 +10,10 @@ Available tutorials:
 - [tutorial #3](https://github.com/sramxtr/fpgas_from_scratch/tree/main/tutorials/tutorial_3_forloops_and_inferred_bram): Parallel processing example -- count unique values. Intro to For loops, and inferred Block RAMs (on-chip memory)
 
 Future tutorials:
-- HW/SW co-design using the Zynq: blink a LED from the ARM
 - Using the HDMI port from hardware to display images/patterns on a monitor
-  - This tutorial can be extended to implement the game of Pong (typical FPGA project)
+  - The tutorial will be extended to implement the game of Pong (typical FPGA project)
+  - Tentative tutorials 4.a and 4.b
+- HW/SW co-design using the Zynq
+  - We will start by reading the state of the on-board switches and blinking LEDs from the on-chip ARM
+  - We will build on the above to implement basic nonce generation for bitcoin mining
+  - Tentative tutorials 5.a and 5.b

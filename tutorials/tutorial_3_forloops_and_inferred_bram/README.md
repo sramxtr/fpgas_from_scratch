@@ -1,7 +1,7 @@
 # Intro to For loops and inferred BRAMs
 
 ## Companion slide deck
-TODO
+Slides available [here](https://docs.google.com/presentation/d/1i3gv-zpUBCyL6naZ5oIBHt0ZH1m3epLEXc_Cymbf0yk/edit?usp=sharing)
 
 ## Circuit functionality
 We will develop a parallel processing circuit that counts the number of unique values in an input stream

@@ -4,7 +4,7 @@
 TODO
 
 ## Circuit functionality
-We will develop a circuit that counts the number of unique values in an input stream
+We will develop a parallel processing circuit that counts the number of unique values in an input stream
 - The input data will be stored to and read from an on-chip Block RAM (BRAM).
 - The unique value counter circuit will count up to a max number of unique values, as defined by a parameter.
 - If the input stream has more unique values than the specified max number of unique values to track, the count of all values not taken into account will be tracked.
@@ -17,7 +17,8 @@ We will develop a circuit that counts the number of unique values in an input st
 While we will not accelerate a full application, this tutorial aims to showcase how to potentially accelerate one kernel in a larger application.
 Recall that FPGAs are really good at deep custom pipelines.
 
-Similar to [tutorial #1](https://github.com/sramxtr/fpgas_from_scratch/tree/main/tutorials/tutorial_1_intro_and_blink_led), we will target the Zybo Z7-20 board.
+Similar to [tutorial #1](https://github.com/sramxtr/fpgas_from_scratch/tree/main/tutorials/tutorial_1_intro_and_blink_led) and [tutorial #2](https://github.com/sramxtr/fpgas_from_scratch/tree/main/tutorials/tutorial_2_fsm_and_sim), we will target the Zybo Z7-20 board.
+That said, most of this tutorial can be completed in simulation, as described in [tutorial #2](https://github.com/sramxtr/fpgas_from_scratch/tree/main/tutorials/tutorial_2_fsm_and_sim).
 
 ## Concepts introduced
 Some concepts introduced in this tutorial include:

@@ -8,7 +8,7 @@ We will develop a parallel processing circuit that counts the number of unique v
 - The input data will be stored to and read from an on-chip Block RAM (BRAM).
 - The unique value counter circuit will count up to a max number of unique values, as defined by a parameter.
 - If the input stream has more unique values than the specified max number of unique values to track, the count of all values not taken into account will be tracked.
-  - This count relfects the MAX of remaining unique values, since we won't be looking into the properties of the untracked values.
+  - This count reflects the MAX of remaining unique values, since we won't be looking into the properties of the untracked values.
 - The user will make use of one switch on the board to select whether to display the number of tracked unique values, or the number of remaining values.
 - The unique value counter is implemented as a deep pipeline, where:
   - Each pipeline stage will track one unique value.

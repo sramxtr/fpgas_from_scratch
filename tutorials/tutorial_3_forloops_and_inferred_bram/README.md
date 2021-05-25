@@ -29,7 +29,7 @@ Some concepts introduced in this tutorial include:
 - On-chip BRAM.
   - Xilinx Vivado provides several mechanisms to instantiate on-chip BRAMS:
     - IP catalog: the user can configure the IP using a UI.
-    - Language templates: Xilinx provides the names of the on-chip primitives, and we can instantitate these just as other Verilog/SV/VHDL modules can be instantiated.
+    - Parametrized macros: Xilinx provides macros for on-chip primitives, and we can instantitate these just as other Verilog/SV/VHDL modules can be instantiated.
     - Inferred BRAMs: we will showcase this approach. Here, we will write SV code that will translate into one or more BRAMs. This approach is often recommended since the code will be to a large extent platform independent.
   - We will also make use of a memory initialization file to set the contents of the BRAM.
 

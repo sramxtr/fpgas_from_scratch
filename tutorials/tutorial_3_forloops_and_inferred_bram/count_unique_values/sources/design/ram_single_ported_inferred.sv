@@ -17,7 +17,7 @@ module ram_single_ported_inferred
             $readmemh(INIT_FILE, memory_sig);
     end // initial
     
-    always @ (posedge clk) begin
+    always_ff @ (posedge clk) begin
         if (write_enable_in)
             memory_sig[address_in] <= data_in;
         data_out <= memory_sig[address_in];

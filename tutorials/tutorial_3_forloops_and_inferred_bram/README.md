@@ -4,7 +4,7 @@
 Slides available [here](https://docs.google.com/presentation/d/1i3gv-zpUBCyL6naZ5oIBHt0ZH1m3epLEXc_Cymbf0yk/edit?usp=sharing)
 
 ## Circuit functionality
-We will develop a parallel processing circuit that counts the number of unique values in an input stream
+We will develop a parallel processing circuit that counts the number of unique values in an input stream:
 - The input data will be stored to and read from an on-chip Block RAM (BRAM).
 - The unique value counter circuit will count up to a max number of unique values, as defined by a parameter.
 - If the input stream has more unique values than the specified max number of unique values to track, the count of all values not taken into account will be tracked.

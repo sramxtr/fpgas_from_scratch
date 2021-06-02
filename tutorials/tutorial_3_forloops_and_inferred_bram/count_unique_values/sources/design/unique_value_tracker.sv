@@ -7,7 +7,7 @@ module unique_value_tracker
         input logic valid_in,
         input logic [NUM_DATA_BITS-1:0] data_in,
         output logic valid_out,
-        output logic [$clog2(NUM_MAX_TRACKED_VALUES):0] num_unique_values_out); 
+        output logic [$clog2(NUM_MAX_TRACKED_VALUES+1)-1:0] num_unique_values_out); 
         
        
     localparam NUM_STAGES = NUM_MAX_TRACKED_VALUES;    

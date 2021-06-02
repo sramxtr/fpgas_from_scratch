@@ -8,13 +8,13 @@ module wrapper
     (input clk,
      input reset,
      input unique_or_untracked_select_in,
-     output [$clog2(NUM_MAX_TRACKED_VALUES):0] counter_out);
+     output [$clog2(NUM_MAX_TRACKED_VALUES+1)-1:0] counter_out);
      
     logic read_valid_sig; 
     logic [NUM_DATA_BITS-1:0] read_data_sig;
     logic [$clog2(NUM_RAM_WORDS)-1:0] read_address_sig;
     logic tracker_valid_out_sig;
-    logic [$clog2(NUM_MAX_TRACKED_VALUES):0] num_unique_values_sig, num_nontracked_data_sig; 
+    logic [$clog2(NUM_MAX_TRACKED_VALUES+1)-1:0] num_unique_values_sig, num_nontracked_data_sig; 
     
     assign counter_out = (unique_or_untracked_select_in == 0) ? num_unique_values_sig : num_nontracked_data_sig; 
     

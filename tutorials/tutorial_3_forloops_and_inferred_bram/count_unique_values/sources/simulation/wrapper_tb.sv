@@ -8,7 +8,7 @@ module wrapper_tb();
     logic clk_sig = 0;
     logic reset_sig;
     logic unique_or_untracked_select_sig;
-    logic [$clog2(NUM_MAX_TRACKED_VALUES):0] counter_out_sig;
+    logic [$clog2(NUM_MAX_TRACKED_VALUES+1)-1:0] counter_out_sig;
 
     always #0.5 clk_sig <= ~clk_sig;
     

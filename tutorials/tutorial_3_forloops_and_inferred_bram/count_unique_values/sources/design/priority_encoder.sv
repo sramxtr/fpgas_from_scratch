@@ -3,7 +3,7 @@
 module priority_encoder
     #(parameter NUM_DATA_BITS = 32)
     (input logic [NUM_DATA_BITS-1:0] data_in,
-     output logic [$clog2(NUM_DATA_BITS):0] data_out);
+     output logic [$clog2(NUM_DATA_BITS+1)-1:0] data_out);
      
     always_comb begin
         data_out = 0;

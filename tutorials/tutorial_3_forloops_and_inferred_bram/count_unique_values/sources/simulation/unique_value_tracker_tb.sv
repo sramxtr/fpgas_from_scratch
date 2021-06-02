@@ -14,7 +14,7 @@ module unique_value_tracker_tb();
     logic valid_in_sig = 0;
     logic valid_out_sig;
     logic [NUM_DATA_BITS-1:0] data_in_sig = 0;
-    logic [$clog2(NUM_MAX_TRACKED_VALUES):0] num_unique_values_out_sig;
+    logic [$clog2(NUM_MAX_TRACKED_VALUES+1)-1:0] num_unique_values_out_sig;
     
     always #0.5 clk_sig <= ~clk_sig;
 

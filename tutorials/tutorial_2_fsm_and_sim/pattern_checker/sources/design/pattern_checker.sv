@@ -76,8 +76,8 @@ module pattern_checker
     
     always_ff @ (posedge clk) begin
         if (reset == 1)
-            current_state_sig = WAIT_FOR_START;
+            current_state_sig <= WAIT_FOR_START;
         else
-            current_state_sig = next_state_sig;
+            current_state_sig <= next_state_sig;
     end // always_ff
 endmodule
